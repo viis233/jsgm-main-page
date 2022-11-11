@@ -1,0 +1,129 @@
+li{
+  list-style: none;
+}
+
+@font-face {
+  font-family: "huxiao";
+  src: url("/src/assets/font/huxiao.ttf");
+}
+
+@keyframes fadeAnimation {
+0%{
+  opacity:0
+}
+  50%{
+  opacity: 1;
+}
+  100%{
+    opacity: 0;
+  }
+}
+@keyframes scrollLeft {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-80%);
+  }
+}
+
+#root{
+  width: 100%;
+}
+.app{
+  height: 100%;
+  width: 100%;
+}
+
+.bgContainer{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  .layer{
+
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .logo{
+    width: 100vw;
+    height: 100vh;
+    max-width: 750px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin:auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .fadeAnimation{
+    animation: fadeAnimation 5s infinite;
+    animation-timing-function: ease;
+  }
+}
+
+.topBar{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top:0;
+  padding: 0;
+
+  .title{
+    padding: 10px;
+    width: auto;
+    text-align: center;
+    background: red;
+  }
+}
+.bottomBar{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin:auto;
+  height: 50px;
+  .button{
+    max-width: 200px;
+    display: flex;
+    flex: auto;
+    height: 100%;
+    background-size: cover;
+    a{
+      width: 100%;
+      height: 100%;
+    }
+    text-align: center;
+    line-height:50px
+  }
+
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-top: 100px;
+  height: 100%;
+  width: 100%;
+  white-space:pre-wrap;
+  word-break: break-all;
+  word-wrap:break-word;
+
+  font-family: huxiao, serif;
+  font-size: 2rem;
+  color: #1a1a1a;
+  text-shadow: 0 0 10px white;
+}
