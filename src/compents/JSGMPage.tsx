@@ -12,7 +12,13 @@ let JSGMPage = () => {
       <div className="bgContainer">
         <div className={"layer"} style={{ backgroundImage: `url(${bg})` }} />
         {/*<div className={"layer fadeAnimation"}   style={{backgroundImage:`url(${effect1})`}}/>*/}
-        <div className={"logo"} style={{ backgroundImage: `url(${logo})` }} />
+      </div>
+      <div className={"content"}>
+        <img className={"logo"} src={logo} alt={"今时古梦"} />
+        <div className={"contentP"}>
+          『今时古梦』是大型开放式国风文化企划，沿着时代变迁、朝代更迭的轨迹，以歌曲、插画、影视、游戏等形式为大家呈现出一幅立体而浩瀚的历史长卷。
+          团队拥有丰富的影音创作、文创设计、活动策划经验，诚邀各界历史文化爱好者和品牌共创合作！
+        </div>
       </div>
     </>
   );
